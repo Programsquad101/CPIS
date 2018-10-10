@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style type="text/css">
+        body {
+            background-image: url("https://images.pexels.com/photos/875858/pexels-photo-875858.png?cs=srgb&dl=animal-avian-bird-875858.jpg&fm=jpg");
+            background-size: cover;
+
+            background-repeat: repeat;
+            background-position: 50% 100%;
+            color: #ffffff;
+            font-family: Arial;
+            text-shadow: 1px 1px 1px #000;
+            text-align: center;
+            font-size: 1.6em;
+        }
+
+        #header {
+            background-image: url("https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+            font-size: 1.5em;
+            text-align: center;
+            width: 600px;
+            margin: 10px auto 0px auto;
+            padding: 25px;
+            border: 1px #EBECEC solid;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10),
+                0px 10px 20px rgba(0, 0, 0, 0.05),
+                0px 20px 20px rgba(0, 0, 0, 0.05),
+                0px 30px 20px rgba(0, 0, 0, 0.05);
+                
+        }
+
+        #pagewrap {
+            background-image: url("https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+            background-size: cover;
+            text-align: center;
+            padding: 200px 22px 00px 22px;
+            height: 500px;
+            width: 600px;
+            margin: 30px auto 0px auto;
+            border: 2px solid;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10),
+                0px 10px 20px rgba(0, 0, 0, 0.05),
+                0px 20px 20px rgba(0, 0, 0, 0.05),
+                0px 30px 20px rgba(0, 0, 0, 0.05);
+        }
+
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+
+        button {
+            font-size: .9em;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 25px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+
+        button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+
+<body>
+        <div id="header">Welcome to CPIS System </div>
+    <div id="pagewrap">
+
+        <form name="loginForm" method="post" action="login.php">
+
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="userid" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pwd" required>
+
+                <button type="submit" onclick="return check(this.form)" value="Login">Login In</button>
+            </div>
+
+
+
+
+
+        </form>
+        <script language="javascript">
+            function check(form) {
+
+                if (form.userid.value == "CPIS" && form.pwd.value == "CPIS") {
+                    return true;
+                }
+                else {
+                    alert("Error Password or Username")
+                    return false;
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
